@@ -8,7 +8,7 @@ import {
   TableRowColumn,
 } from 'material-ui/Table';
 
-import DropDownMenuSimpleExample from '../components/Dropdown/Dropdown.jsx'
+import DropDownMenuSimpleExample from '../components/Dropdown/Dropdown'
 
 class Compare extends Component {
   render = () => {

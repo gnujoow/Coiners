@@ -1,1 +1,1 @@
-export default './TableExampleSimple.jsx'
+export default './TableExampleSimple'

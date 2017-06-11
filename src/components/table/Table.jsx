@@ -8,7 +8,7 @@ import {
   TableRowColumn,
 } from 'material-ui/Table';
 
-import DropDownMenuSimpleExample from '../Dropdown/Dropdown.jsx'
+import DropDownMenuSimpleExample from '../Dropdown/Dropdown'
 /**
  * A simple table demonstrating the hierarchy of the `Table` component and its sub-components.
  */

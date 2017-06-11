@@ -1,6 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
+
+import {fetchPrice} from '../../action/ActionCreator'
 
 const styles = {
   customWidth: {
@@ -15,19 +18,21 @@ const MARKET_LIST = [
   {label: 'Bithumb', name: 'bithumb'},
 ]
 
-export default class DropDownMenuSimpleExample extends React.Component {
-
+class DropDownMenuSimpleExample extends React.Component {
   constructor(props) {
     super(props);
     this.state = {value: 'bithumb'};
   }
 
-  handleChange = (event, index, value) => this.setState({value});
+  handleChange = (event, index, value) => {
+    this.setState({value});
+    fetchPrice(value);
+  }
 
   render() {
-    const items = MARKET_LIST.map(item => {
+    const items = MARKET_LIST.map((item, index) => {
       return (
-        <MenuItem value={item.name} primaryText={item.label} />
+        <MenuItem key={index} value={item.name} primaryText={item.label} />
       )
     })
     return (
@@ -41,3 +46,13 @@ export default class DropDownMenuSimpleExample extends React.Component {
     );
   }
 }
+
+function mapStateToProps(state){
+  return { posts: '' };
+}
+
+DropDownMenuSimpleExample = connect(
+  mapStateToProps, {fetchPrice}
+)(DropDownMenuSimpleExample);
+
+export default DropDownMenuSimpleExample

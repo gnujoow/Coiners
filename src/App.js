@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
-import TableExampleSimple from './components/table/Table.jsx'
-import Compare from './containers/Compare.jsx'
+import TableExampleSimple from './components/table/Table'
+import Compare from './containers/Compare'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Table from './components/table/Table'
 
 class App extends Component {
   render() {
     return (
       <div>
-        <AppBar
-          title="Title"
-          iconClassNameRight="muidocs-icon-navigation-expand-more"
-        />
-        <Compare />
+        <MuiThemeProvider>
+          {/* <AppBar
+            title="Title"
+            iconClassNameRight="muidocs-icon-navigation-expand-more"
+          /> */}
+          {/* <Table /> */}
+          <Compare />
+        </MuiThemeProvider>
       </div>
     );
   }

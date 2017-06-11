@@ -1,0 +1,2 @@
+export const FETCH_PRICE = 'FETCH_PRICE'
+export const FETCH_PRICE_FILLED = 'FETCH_PRICE_FILLED'

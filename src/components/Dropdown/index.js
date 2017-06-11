@@ -1,1 +1,1 @@
-export default './DropDownMenuSimpleExample.jsx'
+export default './DropDownMenuSimpleExample'
