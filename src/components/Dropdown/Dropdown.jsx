@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import {bindActionCreators} from 'redux'
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 
@@ -26,7 +27,7 @@ class DropDownMenuSimpleExample extends React.Component {
 
   handleChange = (event, index, value) => {
     this.setState({value});
-    fetchPrice(value);
+    this.props.fetchPrice(value);
   }
 
   render() {
@@ -48,7 +49,9 @@ class DropDownMenuSimpleExample extends React.Component {
 }
 
 function mapStateToProps(state){
-  return { posts: '' };
+  return {
+    ...state.cryptowatchEpic
+  };
 }
 
 DropDownMenuSimpleExample = connect(

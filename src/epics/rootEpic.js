@@ -1,6 +1,8 @@
 import { combineEpics } from 'redux-observable';
-import { cryptowatchEpic } from './cryptowatchEpic'
+import cryptowatchEpic from './cryptowatchEpic'
 
-export const rootEpic = combineEpics(
-  cryptowatchEpic,
+const rootEpic = combineEpics(
+  cryptowatchEpic
 );
+
+export default rootEpic

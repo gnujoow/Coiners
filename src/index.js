@@ -6,11 +6,13 @@ import 'rxjs';
 
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import store from './store';
+import configureStore from './store';
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
+
+const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>

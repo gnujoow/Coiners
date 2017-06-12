@@ -1,12 +1,17 @@
 import {FETCH_PRICE, FETCH_PRICE_FILLED} from '../action/ActionTypes'
 
-export default (state = { isPinging: false }, action) => {
+const INITIAL_STATE = {
+  market: 'no_market',
+  pirce: {}
+}
+
+export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case FETCH_PRICE:
-      return { isPinging: true };
+      return { market: action.payload };
 
     case FETCH_PRICE_FILLED:
-      return { isPinging: false };
+      return { isPinging: false, pirce: action.payload };
 
     default:
       return state;

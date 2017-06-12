@@ -8,16 +8,14 @@ import Table from './components/table/Table'
 class App extends Component {
   render() {
     return (
-      <div>
-        <MuiThemeProvider>
-          {/* <AppBar
-            title="Title"
-            iconClassNameRight="muidocs-icon-navigation-expand-more"
-          /> */}
-          {/* <Table /> */}
-          <Compare />
-        </MuiThemeProvider>
-      </div>
+      <MuiThemeProvider>
+        {/* <AppBar
+          title="Title"
+          iconClassNameRight="muidocs-icon-navigation-expand-more"
+        /> */}
+        {/* <Table /> */}
+        <Compare />
+      </MuiThemeProvider>
     );
   }
 }
