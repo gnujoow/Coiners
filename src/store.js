@@ -6,7 +6,7 @@ import rootEpic from './epics/rootEpic';
 import cryptowatchEpic from './epics/cryptowatchEpic';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const epicMiddleware = createEpicMiddleware(cryptowatchEpic);
+const epicMiddleware = createEpicMiddleware(rootEpic);
 
 export default function configureStore() {
   const store = createStore(

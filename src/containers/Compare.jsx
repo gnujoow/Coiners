@@ -9,9 +9,29 @@ import {
 } from 'material-ui/Table';
 
 import DropDownMenuSimpleExample from '../components/Dropdown/Dropdown'
+const Item = ['BTC', 'ETH', 'LTC', 'XRP']
 
 class Compare extends Component {
   render = () => {
+    const Left = Item.map((e, idx) => {
+      return (
+        <TableRow key={`left${idx}`}>
+          <TableRowColumn>{`L_${e}`}</TableRowColumn>
+          <TableRowColumn>0</TableRowColumn>
+          <TableRowColumn>0</TableRowColumn>
+        </TableRow>
+      )
+    })
+
+    const Right = Item.map((e, idx) => {
+      return (
+        <TableRow key={`right${idx}`}>
+          <TableRowColumn>0</TableRowColumn>
+          <TableRowColumn>0</TableRowColumn>
+          <TableRowColumn>{`R_${e}`}</TableRowColumn>
+        </TableRow>
+      )
+    })
     return (
       <div className='container'>
         <div className='row'>
@@ -45,26 +65,7 @@ class Compare extends Component {
               <TableBody
                 displayRowCheckbox={false}
               >
-                <TableRow>
-                  <TableRowColumn>Poloniex</TableRowColumn>
-                  <TableRowColumn>0</TableRowColumn>
-                  <TableRowColumn>0</TableRowColumn>
-                </TableRow>
-                <TableRow>
-                  <TableRowColumn>Poloniex</TableRowColumn>
-                  <TableRowColumn>0</TableRowColumn>
-                  <TableRowColumn>0</TableRowColumn>
-                </TableRow>
-                <TableRow>
-                  <TableRowColumn>Poloniex</TableRowColumn>
-                  <TableRowColumn>0</TableRowColumn>
-                  <TableRowColumn>0</TableRowColumn>
-                </TableRow>
-                <TableRow>
-                  <TableRowColumn>Poloniex</TableRowColumn>
-                  <TableRowColumn>0</TableRowColumn>
-                  <TableRowColumn>0</TableRowColumn>
-                </TableRow>
+                {Left}
               </TableBody>
             </Table>
           </div>
@@ -115,26 +116,7 @@ class Compare extends Component {
               <TableBody
                 displayRowCheckbox={false}
               >
-                <TableRow>
-                  <TableRowColumn>0</TableRowColumn>
-                  <TableRowColumn>0</TableRowColumn>
-                  <TableRowColumn>Poloniex</TableRowColumn>
-                </TableRow>
-                <TableRow>
-                  <TableRowColumn>0</TableRowColumn>
-                  <TableRowColumn>0</TableRowColumn>
-                  <TableRowColumn>Poloniex</TableRowColumn>
-                </TableRow>
-                <TableRow>
-                  <TableRowColumn>0</TableRowColumn>
-                  <TableRowColumn>0</TableRowColumn>
-                  <TableRowColumn>Poloniex</TableRowColumn>
-                </TableRow>
-                <TableRow>
-                  <TableRowColumn>0</TableRowColumn>
-                  <TableRowColumn>0</TableRowColumn>
-                  <TableRowColumn>Poloniex</TableRowColumn>
-                </TableRow>
+                {Right}
               </TableBody>
             </Table>
           </div>

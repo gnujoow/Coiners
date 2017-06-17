@@ -13,16 +13,15 @@ const styles = {
 };
 
 const MARKET_LIST = [
-  {label: 'Poloniex', name: 'poloniex'},
-  {label: 'Bitfinex', name: 'bitfinex'},
-  {label: 'Kraken', name: 'kraken'},
-  {label: 'Bithumb', name: 'bithumb'},
+  {label: 'Poloniex', name: 'Poloniex'},
+  {label: 'Bitfinex', name: 'Bitfinex'},
+  {label: 'Coinone', name: 'Coinone'},
 ]
 
 class DropDownMenuSimpleExample extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: 'bithumb'};
+    this.state = {value: 'Poloniex'};
   }
 
   handleChange = (event, index, value) => {
