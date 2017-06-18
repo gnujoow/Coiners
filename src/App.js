@@ -16,7 +16,7 @@ class App extends Component {
         <div>
           <Titlebar />
           <Switch>
-            <Route exact path='/track' component={Tracking} />
+            <Route exact path='/' component={Tracking} />
             <Route path='/compare' component={Compare} />
             <Route path='/info' component={Info} />
           </Switch>

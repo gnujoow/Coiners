@@ -20,8 +20,8 @@ const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    {/* <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}> */}
-    <MuiThemeProvider>
+    <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+    {/* <MuiThemeProvider> */}
       <App />
     </MuiThemeProvider>
   </Provider>,
