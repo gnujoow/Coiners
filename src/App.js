@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 import AppBar from 'material-ui/AppBar';
-import TableExampleSimple from './components/table/Table'
 import Compare from './containers/Compare'
 import Tracking from './containers/Tracking'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Table from './components/table/Table'
+
+import BottomTab from './components/Tab/Tab.jsx'
 
 class App extends Component {
   render() {
     return (
-      <MuiThemeProvider>
-        {/* <AppBar
-          title="Title"
-          iconClassNameRight="muidocs-icon-navigation-expand-more"
-        /> */}
-        {/* <Table /> */}
-        {/* <Compare /> */}
-        <Tracking />
-      </MuiThemeProvider>
+      <BrowserRouter>
+        <div>
+          <AppBar
+            title="Title"
+            iconClassNameRight="muidocs-icon-navigation-expand-more"
+          />
+          <Switch>
+            <Route exact path='/' component={Tracking} />
+            <Route path='/compare' component={Compare} />
+          </Switch>
+          <BottomTab />
+        </div>
+      </BrowserRouter>
     );
   }
 }
